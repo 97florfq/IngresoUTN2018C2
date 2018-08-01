@@ -9,5 +9,75 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
  */
 function ComenzarIngreso () 
 {
- 
+    var edad;
+    var sexo;
+    var estadocivil;
+    var sueldob;
+    var legajo;
+    var nac;
+
+    edad = parseInt(prompt("Ingrese su edad:"));
+
+    while (edad <=18 || edad >=90)
+    {
+        edad = parseInt(prompt("Error, reingrese su edad;"));
+    }
+    document.getElementById("Edad").value = edad;
+    sexo = prompt("Ingrese su sexo (F o M):");
+    while (sexo != "F" && sexo != "M")
+    {
+        sexo = prompt("Error, reingrese su sexo")
+    }
+    document.getElementById("Sexo").value = sexo;
+
+    estadocivil = parseInt(prompt("Ingrese su estado civil : 1 = soltero - 2 = casado - 3 = divorciado - 4 = viudo"));
+    switch (estadocivil)
+    {
+        case "1":    estadocivil = "soltero"
+        document.getElementById("EstadoCivil").value = estadocivil;
+        break;
+        case "2":    estadocivil = "casado"
+        document.getElementById("EstadoCivil").value = estadocivil;
+        break;
+        case "3":    estadocivil = "divorciado"
+        document.getElementById("EstadoCivil").value = estadocivil;
+        break;
+        case "4":    estadocivil = "viudo"
+        document.getElementById("EstadoCivil").value = estadocivil;
+        break;
+    }
+    sueldob = parseInt(prompt ("Ingrese su sueldo bruto"));
+    while (sueldob <8000)
+{
+sueldob = parseInt(prompt("Error, reingrese su sueldo bruto:"));
 }
+document.getElementById("Sueldo").value = sueldob
+
+legajo = parseInt(prompt("Ingrese numero de legajo"));
+while (legajo <999 || legajo >9999)
+{
+    legajo = parseInt(prompt("Error, reingrese numero de legajo"));
+
+}
+document.getElementById("Legajo").value = legajo
+
+nacionalidad = prompt ("Ingrese su nacionalidad : A = Argentino - E = extranjero - N = Nacionalizado");
+switch (nacionalidad)
+{
+    case "A":
+    nacionalidad = "Argentino"
+    document.getElementById("Nacionalidad").value = nacionalidad;
+    break;
+    case "E":
+    nacionalidad = "Extranjero"
+    document.getElementById("Nacionalidad").value = nacionalidad;
+    break;
+    case "N":
+    nacionalidad = "Nacionalizado"
+    document.getElementById("Nacionalidad").value = nacionalidad;
+    break;
+}
+
+
+}
+
