@@ -23,6 +23,7 @@ function ComenzarIngreso ()
         edad = parseInt(prompt("Error, reingrese su edad;"));
     }
     document.getElementById("Edad").value = edad;
+
     sexo = prompt("Ingrese su sexo (F o M):");
     while (sexo != "F" && sexo != "M")
     {
@@ -30,19 +31,19 @@ function ComenzarIngreso ()
     }
     document.getElementById("Sexo").value = sexo;
 
-    estadocivil = parseInt(prompt("Ingrese su estado civil : 1 = soltero - 2 = casado - 3 = divorciado - 4 = viudo"));
+    estadocivil = prompt("Ingrese su estado civil : ");
     switch (estadocivil)
     {
-        case "1":    estadocivil = "soltero"
+        case "soltero":    estadocivil = "soltero"
         document.getElementById("EstadoCivil").value = estadocivil;
         break;
-        case "2":    estadocivil = "casado"
+        case "casado":    estadocivil = "casado"
         document.getElementById("EstadoCivil").value = estadocivil;
         break;
-        case "3":    estadocivil = "divorciado"
+        case "divorciado":    estadocivil = "divorciado"
         document.getElementById("EstadoCivil").value = estadocivil;
         break;
-        case "4":    estadocivil = "viudo"
+        case "viudo":    estadocivil = "viudo"
         document.getElementById("EstadoCivil").value = estadocivil;
         break;
     }
